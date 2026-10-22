@@ -136,7 +136,7 @@ Para outro modelo, altera `VidPid` em `DisplayWorker.cs`. Alguns destes modelos 
 
 ## Aviso legal
 
-Projeto independente, sem qualquer afiliação com a NTECH. O `TempComm.dll` é propriedade da NTECH e **não é distribuído** neste repositório: é copiado da tua instalação do software oficial. Usa por tua conta e risco.
+Projeto independente feito com auxilio do Claude, sem qualquer afiliação com a NTECH. O `TempComm.dll` é propriedade da NTECH e **não é distribuído** neste repositório: é copiado da tua instalação do software oficial. Usa por tua conta e risco.
 
 ## Licença
 
