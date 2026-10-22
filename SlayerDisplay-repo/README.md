@@ -1,3 +1,4 @@
+[README.md](https://github.com/user-attachments/files/33831060/README.md)
 # SlayerDisplay
 
 Serviço de substituição para o software **SLAYER CPU Live Temperature** (NTECH) que faz o display do cooler **NTECH Slayer RXA50** voltar a mostrar a temperatura do CPU em processadores recentes, como o AMD Ryzen 9000 (Zen 5).
@@ -10,7 +11,7 @@ Serviço de substituição para o software **SLAYER CPU Live Temperature** (NTEC
 
 **Sintomas:**
 
-- O display do Slayer RXA50 mostra apenas traços (`---`).
+- O display do Slayer RXA50 mostra apenas traços (`--`).
 - O serviço `SLAYERCPULiveTemperature` aparece como "Em execução".
 - Reinstalar, reiniciar o serviço, desligar o Armoury Crate, desligar a Integridade de memória ou fazer power-drain ao PC não resolve.
 - Com `IsLog=True` no `config.ini`, o log enche-se de:
@@ -55,7 +56,7 @@ O **SlayerDisplay** mantém o `TempComm.dll` original e troca a leitura de senso
 
 ### A partir de uma release (recomendado)
 
-1. Descarrega o `SlayerDisplay-win-x86.zip` da página [Releases](../../releases) e extrai-o.
+1. Descarrega o `SlayerDisplay-win-x86.zip` da página [Releases](https://github.com/lizandro005/SlayerDisplay-Repo/releases) e extrai-o.
 2. Abre o PowerShell **como administrador** nessa pasta e corre:
    ```powershell
    powershell -ExecutionPolicy Bypass -File .\install.ps1
@@ -71,8 +72,8 @@ O script:
 Requer o [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) (`winget install Microsoft.DotNet.SDK.8`).
 
 ```powershell
-git clone https://github.com/<utilizador>/SlayerDisplay.git
-cd SlayerDisplay
+git clone https://github.com/lizandro005/SlayerDisplay-Repo.git
+cd SlayerDisplay-Repo
 dotnet publish src/SlayerDisplay -c Release -o publish
 
 # teste em consola (como administrador, com o serviço original parado)
@@ -134,9 +135,15 @@ O serviço deve funcionar com outros modelos que usem o mesmo software. Os VID/P
 
 Para outro modelo, altera `VidPid` em `DisplayWorker.cs`. Alguns destes modelos usam um formato de envio ligeiramente diferente (`SendDynamicDataNew`), por isso podem precisar de ajustes.
 
+## Créditos
+
+- **[Lizandro](https://github.com/lizandro005)**: diagnóstico no hardware real, testes e manutenção do projeto.
+- **[Claude](https://claude.ai) (Anthropic)**: análise do código decompilado do software original, identificação da causa e do protocolo do display, e escrita do serviço, dos scripts e desta documentação.
+- **[LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor)** e **[PawnIO](https://pawnio.eu/)**: leitura dos sensores.
+
 ## Aviso legal
 
-Projeto independente feito com auxilio do Claude, sem qualquer afiliação com a NTECH. O `TempComm.dll` é propriedade da NTECH e **não é distribuído** neste repositório: é copiado da tua instalação do software oficial. Usa por tua conta e risco.
+Projeto independente, sem qualquer afiliação com a NTECH. O `TempComm.dll` é propriedade da NTECH e **não é distribuído** neste repositório: é copiado da tua instalação do software oficial. Usa por tua conta e risco.
 
 ## Licença
 
